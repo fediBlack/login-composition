@@ -1,20 +1,18 @@
 {
-  "login": {
+  "login_page": {
     "welcome": "Bienvenue",
     "wrong_credentials": "Vos identifiants sont incorrects",
     "forgotten_password": "Mot de passe oublié ?",
     "remember_login": "Se rappeler de mon email pendant 30 jours",
     "login_description": "Veuillez entrer vos identifiants de connexion.",
     "email_placeholder": "Entrez votre adresse email",
-    "password_placeholder": "******"
+    "password_placeholder": "******",
+    "email_required": "Votre adresse email est requis",
+    "go_back_to_email": "Revenir à l’adresse email",
+    "password_required": "Le mot de passe est requis"
   },
   "global": {
     "email": "Adresse email",
     "password": "Mot de passe"
-  },
-  "login_page": {
-    "email_required": "Votre adresse email est requis",
-    "go_back_to_email": "Revenir à l’adresse email",
-    "password_required": "Le mot de passe est requis"
   }
 }

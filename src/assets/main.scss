@@ -59,13 +59,16 @@
 
     color: var(--dark-blue);
 
-    .text--ce-color-blue-500 {
-        color: var(--ce-color-blue-500);
+    .text {
+        &--ce-color-blue-500 {
+            color: var(--ce-color-blue-500);
+        }
+
+        &--danger-dark {
+            color: var(--outline-theme_light-danger_high_dm);
+        }
     }
 
-    .text--danger-dark {
-        color: var(--outline-theme_light-danger_high_dm);
-    }
 
     /* --vt-c-white: #ffffff;
     --vt-c-white-soft: #f8f8f8;

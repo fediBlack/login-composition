@@ -1,13 +1,9 @@
 <template>
   <div class="flex h-full flex-row justify-center">
     <div class="my-auto login_page h-full flex flex-col items-center gap-8">
-      <div class="flex justify-between w-full">
-        <img src="@/assets/club-employes.png" alt="company name" />
-        <div class="w-full"></div>
-      </div>
       <div class="text-center">
-        <h2 class="mb-2">{{ $t('login.welcome') }} 👋</h2>
-        <div class="text-sm">{{ $t('login.login_description') }}</div>
+        <h2 class="mb-2">{{ $t('login_page.welcome') }} 👋</h2>
+        <div class="text-sm">{{ $t('login_page.login_description') }}</div>
       </div>
 
       <div class="login_page-email_wrapper w-full">
@@ -22,7 +18,7 @@
         <p class="mb-1">{{ $t('global.email') }}</p>
         <CustomInput
           v-model="email"
-          :placeholder="$t('login.email_placeholder')"
+          :placeholder="$t('login_page.email_placeholder')"
           :has-error="emailHasError"
           :error-message="$t('login_page.email_required')"
           :disabled="activeStep != 1"
@@ -33,7 +29,7 @@
         <!-- TO_DO add custom password field into our custom input -->
         <CustomPasswordInput
           v-model="password"
-          :placeholder="$t('login.password_placeholder')"
+          :placeholder="$t('login_page.password_placeholder')"
           :has-error="passwordHasError"
           :error-message="$t('login_page.password_required')"
         />
@@ -41,15 +37,17 @@
 
       <div class="flex justify-between w-full">
         <CustomCheckBox v-model="isRememberMeActive">
-          <p>{{ $t('login.remember_login') }}</p>
+          <p>{{ $t('login_page.remember_login') }}</p>
         </CustomCheckBox>
       </div>
       <div>
-        <p class="text--ce-color-blue-500 cursor-pointer">{{ $t('login.forgotten_password') }}</p>
+        <p class="text--ce-color-blue-500 cursor-pointer">
+          {{ $t('login_page.forgotten_password') }}
+        </p>
       </div>
       <div v-if="badCredentials" class="login_page-error_message">
         <!-- TO_DO add warning icon -->
-        <p>{{ $t('login.wrong_credentials') }}</p>
+        <p>{{ $t('login_page.wrong_credentials') }}</p>
       </div>
       <CustomButton :disabled="isButtonDisabled" @click="handleValidation">
         Se connecter
